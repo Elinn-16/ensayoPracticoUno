@@ -1,25 +1,24 @@
-body {
-    font-family: monospace;
-    text-align: center;
-    align-items: center;
-    background-color: black;
-}
-
 .fotoo {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual anchura */
-    gap: 5%; /* Espacio entre columnas y filas del 5% del ancho total */
-    margin: 20px auto;
-    width: 90%; /* Ancho total del tablero al 90% del ancho del contenedor */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 5%;
+    margin: 20px auto; 
+    width: 90%; 
+}
+
+.columna {
+    display: flex;
+    flex-direction: column; 
 }
 
 .foto {
-    width: 100px; /* Ancho de cada foto de 100px */
-    height: 100px; /* Alto de cada foto de 100px */
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3vw; /* Tamaño de fuente relativo al ancho del viewport */
+    font-size: 3vw;
     background-color: white;
     border: 4px solid #000000;
 }
@@ -35,4 +34,5 @@ body {
     width: 100%;
     text-align: center;
 }
+
 
