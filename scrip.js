@@ -4,13 +4,13 @@ let imagenesSeleccionadas = [];
 fotos.forEach((foto) => {
     foto.addEventListener('click', () => {
         const columna = foto.parentElement; 
-        const fotosColumna = columna.querySelectorAll('.foto'); //tener todas las fotos de una columna
+        const fotosColumna = columna.querySelectorAll('.foto'); //selecciona las fotos y la guarda en una lista 
 
         fotosColumna.forEach((fotoColumna) => {
-            fotoColumna.classList.remove('clicked'); //quitar la clase 'clicked' de todas las fotos de una columna
+            fotoColumna.classList.remove('clicked'); 
         });
 
-        foto.classList.add('clicked'); //Agregar la clase 'clicked' a la foto que es seleccionada
+        foto.classList.add('clicked'); //resanta la foto seleccionada 
     
         if (imagenesSeleccionadas.length === 2) {
             const primeraImagen = imagenesSeleccionadas[0];
