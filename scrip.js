@@ -1,4 +1,5 @@
 const fotos = document.querySelectorAll('.foto');
+const imagenesSeleccionadas = [];
 
 fotos.forEach((foto) => {
     foto.addEventListener('click', () => {
@@ -10,5 +11,20 @@ fotos.forEach((foto) => {
         });
 
         foto.classList.add('clicked'); //Agregar la clase 'clicked' a la foto que es seleccionada
+    
+        if (imagenesSeleccionadas.length === 2) {
+            const primeraImagen = imagenesSeleccionadas[0];
+            const segundaImagen = imagenesSeleccionadas[1];
+
+            if (primeraImagen.id === segundaImagen.id) {
+                alert('¡Felicitaciones acertaste! ');
+                primeraImagen.remove();
+                segundaImagen.remove();
+                imagenesSeleccionadas = [];
+            } else {
+                imagenesSeleccionadas = [];
+            }
+        }
+
     });
 });
