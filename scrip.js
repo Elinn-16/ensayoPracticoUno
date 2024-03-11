@@ -1,5 +1,5 @@
 const fotos = document.querySelectorAll('.foto');
-const imagenesSeleccionadas = [];
+let imagenesSeleccionadas = [];
 
 fotos.forEach((foto) => {
     foto.addEventListener('click', () => {
@@ -24,6 +24,8 @@ fotos.forEach((foto) => {
             } else {
                 imagenesSeleccionadas = [];
             }
+        } else {
+            imagenesSeleccionadas.push(foto); // Agrega la imagen seleccionada al array
         }
 
     });
