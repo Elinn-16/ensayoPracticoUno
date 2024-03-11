@@ -17,11 +17,15 @@ fotos.forEach((foto) => {
             const segundaImagen = imagenesSeleccionadas[1];
 
             if (primeraImagen.id === segundaImagen.id) {
-                alert('¡Felicitaciones acertaste! ');
+                alert('Felicitaciones, ¡asi se hace!');
                 primeraImagen.remove();
                 segundaImagen.remove();
                 imagenesSeleccionadas = [];
             } else {
+                alert('Lo siento mucho, ¡mejor la próxima!');
+                imagenesSeleccionadas.forEach((img) => {
+                    img.classList.remove('clicked'); // Eliminar la clase 'clicked'
+                });
                 imagenesSeleccionadas = [];
             }
         } else {
