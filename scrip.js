@@ -25,7 +25,7 @@ fotos.forEach((foto) => {
                 imagenesSeleccionadas = [];
             }
         } else {
-            imagenesSeleccionadas.push(foto); // Agrega la imagen seleccionada al array
+            imagenesSeleccionadas.push(foto); // Agrega la imagen seleccionada al arreglo
         }
 
     });
