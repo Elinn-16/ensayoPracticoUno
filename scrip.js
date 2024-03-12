@@ -10,19 +10,25 @@ fotos.forEach((foto) => {
             fotoColumna.classList.remove('clicked'); 
         });
 
-        foto.classList.add('clicked'); //resanta la foto seleccionada 
-    
+        foto.classList.add('clicked'); //resalta la foto seleccionada 
+
         if (imagenesSeleccionadas.length === 2) {
             const primeraImagen = imagenesSeleccionadas[0];
             const segundaImagen = imagenesSeleccionadas[1];
 
             if (primeraImagen.id === segundaImagen.id) {
-                alert('Felicitaciones, ¡asi se hace!');
+                document.getElementById('modalFelicitaciones').style.display = 'block';
+                setTimeout(function() {
+                    document.getElementById('modalFelicitaciones').style.display = 'none';
+                }, 2000);
                 primeraImagen.remove();
                 segundaImagen.remove();
                 imagenesSeleccionadas = [];
             } else {
-                alert('Lo siento mucho, ¡mejor la próxima!');
+                document.getElementById('modalError').style.display = 'block';
+                setTimeout(function() {
+                    document.getElementById('modalError').style.display = 'none';
+                }, 2000);
                 imagenesSeleccionadas.forEach((img) => {
                     img.classList.remove('clicked'); // Eliminar la clase 'clicked'
                 });
