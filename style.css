@@ -12,17 +12,22 @@
     align-items: center; 
 }
 
-.fotoo {
+.container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 5%;
     margin: 20px auto; 
     width: 90%; 
+    max-width: 800px;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .columna {
     display: flex;
     flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .foto {
